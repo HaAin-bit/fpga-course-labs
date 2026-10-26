@@ -1,0 +1,12 @@
+# Gowin-generated and local files
+**/impl/
+**/*.gprj.user
+**/*.fs
+**/*.bin
+**/*.binx
+**/*.db
+**/*.pr
+**/*.log
+**/*.raw
+*.tmp
+Thumbs.db
