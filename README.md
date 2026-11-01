@@ -4,15 +4,15 @@ Selected lab artifacts from the **FPGA Programming** course. This repository con
 
 | Lab | What the source contains | Evidence currently available |
 | --- | --- | --- |
-| [Button debounce and LED toggle](button-debounce/) | Debounce filter and LED toggle modules | Source and Gowin project files; no independent board or testbench result documented |
-| [LFSR and LED demultiplexer](lfsr-led-demux/) | 22-bit LFSR feeding LED selection through a 1-to-4 demultiplexer | Source and Gowin project files; no independent board or testbench result documented |
+| [Button debounce and LED toggle](button-debounce/) | Debounce filter and LED toggle modules | Source, Gowin project files and a self-checking simulation testbench; no independent board result documented |
+| [LFSR and LED demultiplexer](lfsr-led-demux/) | 22-bit LFSR feeding LED selection through a 1-to-4 demultiplexer | Source, Gowin project files and a self-checking simulation testbench; no independent board result documented |
 | [Memory game](memory-game/) | Fixed 7-step LED sequence, button handling, FSM, and seven-segment output | Source and Gowin project files; course participant confirmed programming and observing the design on a physical board |
 
 All three project files target **Gowin GW5A-25A** (`GW5A-LV25UG324C2/I1`). The included constraints match the course board and should be checked against another board's schematic before programming. The source code was developed with AI assistance; inclusion here records course work and the deployment workflow, not a claim of independently authoring every RTL module.
 
 ## Reproduce
 
-Open the `.gprj` file for one lab in Gowin IDE. Confirm the top module and device, inspect `src/*.cst` against the board, then run synthesis and placement/routing. Only program hardware after checking pinout and I/O voltage. Empty `.sdc` files are retained because the original Gowin project references them.
+Open the `.gprj` file for one lab in Gowin IDE. Confirm the top module and device, inspect `src/*.cst` against the board, then run synthesis and placement/routing. Only program hardware after checking pinout and I/O voltage. Check each clock constraint against the actual board clock. The memory-game `.sdc` remains empty.
 
 ## Scope
 
